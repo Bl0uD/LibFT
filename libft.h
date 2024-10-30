@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:26:49 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:27:25 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:12:48 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 char	*ft_itoa(int n);
 char	*ft_strcat(char *dest, const char *str);
@@ -40,7 +40,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-int     ft_isspace(int c);
+int		ft_isspace(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strcasecmp(const char *s1, const char *s2);
 int		ft_strcmp(const char *s1, const char *s2);
@@ -57,8 +57,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_memdel(void **ap);
-void	*ft_memmem(const void *src, size_t srclen,
-		const void *finder, size_t finderlen);
+void	*ft_memmem(const void *src, size_t srclen, const void *finder, size_t finderlen);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar(char c);

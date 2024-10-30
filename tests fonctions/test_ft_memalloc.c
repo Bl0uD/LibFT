@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memalloc.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:19 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:20 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:24:41 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memalloc_test, allocate_basic_size)
+Test(ft_memalloc_test, allocate_basic_size)
 {
 	size_t	size = 10;
 	void	*ptr = ft_memalloc(size);

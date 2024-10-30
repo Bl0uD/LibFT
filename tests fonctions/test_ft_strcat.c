@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strcat.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:15:15 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:15:16 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:22:41 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_strcat_test, normal_using)
+Test(ft_strcat_test, normal_using)
 {
 	const	char	*src = "jour";
 	const	char	*dest = "Bon";
@@ -31,7 +31,7 @@ Test	(ft_strcat_test, normal_using)
 	cr_assert_str_eq(res, res2);
 }
 
-Test	(ft_strcat_test, empty_dest)
+Test(ft_strcat_test, empty_dest)
 {
 	const	char	*src = "jour";
 	const	char	*dest = "";
@@ -49,7 +49,7 @@ Test	(ft_strcat_test, empty_dest)
 	cr_assert_str_eq(res, res2);
 }
 
-Test	(ft_strcat_test, empty_src)
+Test(ft_strcat_test, empty_src)
 {
 	const	char	*src = "";
 	const	char	*dest = "Bon";
@@ -67,7 +67,7 @@ Test	(ft_strcat_test, empty_src)
 	cr_assert_str_eq(res, res2);
 }
 
-Test	(ft_strcat_test, no_src_no_dest)
+Test(ft_strcat_test, no_src_no_dest)
 {
 	const	char	*src = "";
 	const	char	*dest = "";

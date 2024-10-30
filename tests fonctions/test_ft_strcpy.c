@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:15:25 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:15:26 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:22:15 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_strcpy_test, copy)
+Test(ft_strcpy_test, copy)
 {
 	char	*str = "Bonjour";
 	char	*dest;
@@ -23,7 +23,7 @@ Test	(ft_strcpy_test, copy)
 	cr_assert_eq(nb, strcpy(dest, str));
 }
 
-Test	(ft_strcpy_test, no_string)
+Test(ft_strcpy_test, no_string)
 {
 	char	*str = "";
 	char	*dest;

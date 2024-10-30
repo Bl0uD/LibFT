@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:35 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:36 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:24:14 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memcmp_test, equal)
+Test(ft_memcmp_test, equal)
 {
 	const void	*s1 = "Bonjour";
 	const void	*s2 = "Bonjour";
@@ -24,7 +24,7 @@ Test	(ft_memcmp_test, equal)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_memcmp_test, smaller)
+Test(ft_memcmp_test, smaller)
 {
 	const void	*s1 = "Bonjou";
 	const void	*s2 = "Bonjour";
@@ -36,7 +36,7 @@ Test	(ft_memcmp_test, smaller)
 	cr_assert_lt(verif, 0);
 }
 
-Test	(ft_memcmp_test, bigger)
+Test(ft_memcmp_test, bigger)
 {
 	const void	*s1 = "Bonjour";
 	const void	*s2 = "Bonjou";
@@ -48,7 +48,7 @@ Test	(ft_memcmp_test, bigger)
 	cr_assert_gt(verif, 0);
 }
 
-Test	(ft_memcmp_test, equal_smaller_size_limit)
+Test(ft_memcmp_test, equal_smaller_size_limit)
 {
 	const void	*s1 = "Bonjo";
 	const void	*s2 = "Bonjour";
@@ -60,7 +60,7 @@ Test	(ft_memcmp_test, equal_smaller_size_limit)
 	cr_assert_eq(verif, 0);
 }
 
-Test	(ft_memcmp_test, smaller_char)
+Test(ft_memcmp_test, smaller_char)
 {
 	const void	*s1 = "Banjour";
 	const void	*s2 = "Bonjour";
@@ -72,7 +72,7 @@ Test	(ft_memcmp_test, smaller_char)
 	cr_assert_lt(verif, 0);
 }
 
-Test	(ft_memcmp_test, bigger_char)
+Test(ft_memcmp_test, bigger_char)
 {
 	const void	*s1 = "Bonjour";
 	const void	*s2 = "Banjour";

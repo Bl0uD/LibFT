@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:38 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:39 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:24:02 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memcpy_test, normal_using)
+Test(ft_memcpy_test, normal_using)
 {
 	const void	*src = "Bonjour";
 	void	*dest;
@@ -30,7 +30,7 @@ Test	(ft_memcpy_test, normal_using)
 	cr_assert_str_eq(dest, verif);
 }
 
-Test	(ft_memcpy_test, size_limit)
+Test(ft_memcpy_test, size_limit)
 {
 	const void	*src = "Bonjour";
 	void	*dest;
@@ -47,7 +47,7 @@ Test	(ft_memcpy_test, size_limit)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memcpy_test, no_string)
+Test(ft_memcpy_test, no_string)
 {
 	const void	*src = "";
 	void	*dest;
@@ -64,7 +64,7 @@ Test	(ft_memcpy_test, no_string)
 	cr_assert_str_eq(dest, verif);
 }
 
-Test	(ft_memcpy_test, more_than_max_size)
+Test(ft_memcpy_test, more_than_max_size)
 {
 	const void	*src = "Bonjour";
 	void	*dest;
@@ -81,7 +81,7 @@ Test	(ft_memcpy_test, more_than_max_size)
 	cr_assert_str_eq(dest, verif);
 }
 
-Test	(ft_memcpy_test, no_size)
+Test(ft_memcpy_test, no_size)
 {
 	const void	*src = "Bonjour";
 	void	*dest;

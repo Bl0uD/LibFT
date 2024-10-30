@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memmem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:52 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:53 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:23:40 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memmem_test, normal_using)
+Test(ft_memmem_test, normal_using)
 {
 	void	*src = "Bonjour";
 	void	*finder = "n";
@@ -31,7 +31,7 @@ Test	(ft_memmem_test, normal_using)
 	cr_assert_str_eq(test, verif);
 }
 
-Test	(ft_memmem_test, no_src)
+Test(ft_memmem_test, no_src)
 {
 	void	*src = "";
 	void	*finder = "n";
@@ -47,7 +47,7 @@ Test	(ft_memmem_test, no_src)
 	cr_assert_str_eq(test, verif);
 }
 
-Test	(ft_memmem_test, no_finder)
+Test(ft_memmem_test, no_finder)
 {
 	void	*src = "Bonjour";
 	void	*finder = "";

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memset.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:59 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:15:00 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:23:18 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memset_test, basic_fill)
+Test(ft_memset_test, basic_fill)
 {
 	void	*src = "Bonjour";
 	void	*dest;
@@ -30,7 +30,7 @@ Test	(ft_memset_test, basic_fill)
 	free(test);
 }
 
-Test	(ft_memset_test, full_fill)
+Test(ft_memset_test, full_fill)
 {
 	void	*src = "123456789";
 	void	*dest;
@@ -47,7 +47,7 @@ Test	(ft_memset_test, full_fill)
 	free(test);
 }
 
-Test	(ft_memset_test, zero_length)
+Test(ft_memset_test, zero_length)
 {
 	void	*src = "123456789";
 	void	*dest;
@@ -64,7 +64,7 @@ Test	(ft_memset_test, zero_length)
 	free(test);
 }
 
-Test	(ft_memset_test, fill_with_null)
+Test(ft_memset_test, fill_with_null)
 {
 	void	*src = "123456789";
 	void	*dest;
@@ -81,7 +81,7 @@ Test	(ft_memset_test, fill_with_null)
 	free(test);
 }
 
-Test	(ft_memset_test, empty_memory)
+Test(ft_memset_test, empty_memory)
 {
 	void	*src;
 	void	*test;

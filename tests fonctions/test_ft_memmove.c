@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memmove.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:55 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:56 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:23:33 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <criterion/criterion.h>
 
-Test	(ft_memmove_test, normal_using)
+Test(ft_memmove_test, normal_using)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -28,7 +28,7 @@ Test	(ft_memmove_test, normal_using)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memmove_test, dest_before_src)
+Test(ft_memmove_test, dest_before_src)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -43,7 +43,7 @@ Test	(ft_memmove_test, dest_before_src)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memmove_test, src_before_dest)
+Test(ft_memmove_test, src_before_dest)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -58,7 +58,7 @@ Test	(ft_memmove_test, src_before_dest)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memmove_test, size_0)
+Test(ft_memmove_test, size_0)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -72,7 +72,7 @@ Test	(ft_memmove_test, size_0)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memmove_test, one_octet)
+Test(ft_memmove_test, one_octet)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -86,12 +86,12 @@ Test	(ft_memmove_test, one_octet)
 	cr_assert_eq(memcmp(dest, verif, n), 0);
 }
 
-Test	(ft_memmove_test, NULL_case)
+Test(ft_memmove_test, NULL_case)
 {
 	ft_memmove(NULL, NULL, 0);
 }
 
-Test	(ft_memmove_test, same_dest)
+Test(ft_memmove_test, same_dest)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;

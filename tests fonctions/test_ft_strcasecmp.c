@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strcasecmp.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:15:11 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:15:12 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:22:58 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <strings.h>
 #include <criterion/criterion.h>
 
-Test	(ft_strcasecmp_test, basic_equal_case_insensitive)
+Test(ft_strcasecmp_test, basic_equal_case_insensitive)
 {
 	const char	*s1 = "Bonjour";
 	const char	*s2 = "Bonjour";
@@ -24,7 +24,7 @@ Test	(ft_strcasecmp_test, basic_equal_case_insensitive)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_strcasecmp_test, same_s_with_CAPS)
+Test(ft_strcasecmp_test, same_s_with_CAPS)
 {
 	const char	*s1 = "bonJour";
 	const char	*s2 = "BonjouR";
@@ -34,7 +34,7 @@ Test	(ft_strcasecmp_test, same_s_with_CAPS)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_strcasecmp_test, s1_smaller_than_s2)
+Test(ft_strcasecmp_test, s1_smaller_than_s2)
 {
 	const char	*s1 = "Bonjou";
 	const char	*s2 = "Bonjour";
@@ -45,7 +45,7 @@ Test	(ft_strcasecmp_test, s1_smaller_than_s2)
 	cr_assert_lt(verif, 0);
 }
 
-Test	(ft_strcasecmp_test, s1_bigger_than_s2)
+Test(ft_strcasecmp_test, s1_bigger_than_s2)
 {
 	const char	*s1 = "Bonjour";
 	const char	*s2 = "Bonjou";
@@ -56,7 +56,7 @@ Test	(ft_strcasecmp_test, s1_bigger_than_s2)
 	cr_assert_gt(verif, 0);
 }
 
-Test	(ft_strcasecmp_test, s1_smaller_than_s2_a_char)
+Test(ft_strcasecmp_test, s1_smaller_than_s2_a_char)
 {
 	const char	*s1 = "Banjour";
 	const char	*s2 = "Bonjour";
@@ -67,7 +67,7 @@ Test	(ft_strcasecmp_test, s1_smaller_than_s2_a_char)
 	cr_assert_lt(verif, 0);
 }
 
-Test	(ft_strcasecmp_test, s1_bigger_than_s2_a_char)
+Test(ft_strcasecmp_test, s1_bigger_than_s2_a_char)
 {
 	const char	*s1 = "Bonjour";
 	const char	*s2 = "Banjour";
@@ -78,7 +78,7 @@ Test	(ft_strcasecmp_test, s1_bigger_than_s2_a_char)
 	cr_assert_gt(verif, 0);
 }
 
-Test	(ft_strcasecmp_test, empty_vs_non_empty)
+Test(ft_strcasecmp_test, empty_vs_non_empty)
 {
 	const char	*s1 = "";
 	const char	*s2 = "Bonjour";
@@ -89,7 +89,7 @@ Test	(ft_strcasecmp_test, empty_vs_non_empty)
 	cr_assert_lt(verif, 0);
 }
 
-Test	(ft_strcasecmp_test, both_empty)
+Test(ft_strcasecmp_test, both_empty)
 {
 	const char	*s1 = "";
 	const char	*s2 = "";
@@ -99,7 +99,7 @@ Test	(ft_strcasecmp_test, both_empty)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_strcasecmp_test, special_characters)
+Test(ft_strcasecmp_test, special_characters)
 {
 	const char	*s1 = "Hello!";
 	const char	*s2 = "Hello!";
@@ -109,7 +109,7 @@ Test	(ft_strcasecmp_test, special_characters)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_strcasecmp_test, numbers)
+Test(ft_strcasecmp_test, numbers)
 {
 	const char	*s1 = "Hello123";
 	const char	*s2 = "Hello123";
@@ -119,7 +119,7 @@ Test	(ft_strcasecmp_test, numbers)
 	cr_assert_eq(test, verif);
 }
 
-Test	(ft_strcasecmp_test, non_printable_characters)
+Test(ft_strcasecmp_test, non_printable_characters)
 {
 	const char	*s1 = "Hello\x01";
 	const char	*s2 = "Hello\x01";

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memccpy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:14:25 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:14:26 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 12:24:36 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <criterion/criterion.h>
 #include <string.h>
 
-Test	(ft_memccpy_test, basic_found)
+Test(ft_memccpy_test, basic_found)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -32,7 +32,7 @@ Test	(ft_memccpy_test, basic_found)
 	cr_assert_str_eq(dest, verif);
 }
 
-Test	(ft_memccpy_test, char_not_found)
+Test(ft_memccpy_test, char_not_found)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -50,7 +50,7 @@ Test	(ft_memccpy_test, char_not_found)
 	cr_assert_eq(p1, p2);
 }
 
-Test	(ft_memccpy_test, n_smaller_than_char_position)
+Test(ft_memccpy_test, n_smaller_than_char_position)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -68,7 +68,7 @@ Test	(ft_memccpy_test, n_smaller_than_char_position)
 	cr_assert_eq(p1, p2);
 }
 
-Test	(ft_memccpy_test, overlapping_regions)
+Test(ft_memccpy_test, overlapping_regions)
 {
 	const void	*src = "123456789";
 	void		*dest;
@@ -86,7 +86,7 @@ Test	(ft_memccpy_test, overlapping_regions)
 	cr_assert_eq(p1, p2);
 }
 
-Test	(ft_memccpy_test, zero_length)
+Test(ft_memccpy_test, zero_length)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
@@ -104,7 +104,7 @@ Test	(ft_memccpy_test, zero_length)
 	cr_assert_eq(p1, p2);
 }
 
-Test	(ft_memccpy_test, found_at_last_position)
+Test(ft_memccpy_test, found_at_last_position)
 {
 	const void	*src = "Bonjour comment ca va ?";
 	void		*dest;
