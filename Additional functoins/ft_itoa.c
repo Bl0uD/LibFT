@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:40:07 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:27:02 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/10/30 13:50:43 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,47 +15,46 @@
 #include <stdlib.h>
 #include <limits.h>
 
+char	*ft_alloc(int *i, int signe, long n)
+{
+	char	*a;
+
+	if (n == 0)
+		(*i)++;
+	while (n > 0)
+	{
+		n /= 10;
+		(*i)++;
+	}
+	a = ft_memalloc((*i) + signe + 2);
+	if (signe == 1)
+	{
+		a[0] = '-';
+		(*i)++;
+	}
+	a[(*i)] = '\0';
+	return (a);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*res;
 	int		i;
 	int		j;
-	int		temp;
 	int		signe;
+	long	temp;
 
 	i = 0;
-	temp = n;
 	signe = 0;
-	if (n == -2147483648)
-	{
-		res = "-2147483648";
-		return (res);
-	}
-	if (temp == 0)
-		i++;
-	else if (temp < 0)
+	temp = n;
+	if (temp < 0)
 	{
 		temp *= -1;
 		signe = 1;
 	}
-	while (temp > 0)
-	{
-		temp /= 10;
-		i++;
-	}
-	if (n < 0)
-		temp = n * (-signe);
-	else
-		temp = n;
-	res = (char *)malloc(sizeof(char) * (i + signe + 1));
+	res = ft_alloc(&i, signe, temp);
 	if (!res)
 		return (NULL);
-	if (signe == 1)
-	{
-		res[0] = '-';
-		i++;
-	}
-	res[i] = '\0';
 	j = 1;
 	while (i > j - 1 + signe)
 	{
@@ -66,10 +65,11 @@ char	*ft_itoa(int n)
 	return (res);
 }
 /*
-int	main()
+int	main(void)
 {
 	int		n = -2147483648;
 	char	*res = ft_itoa(n);
 
 	printf("resultat = %s\n", res);
-}*/
+}
+*/
