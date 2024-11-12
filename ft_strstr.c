@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:03:13 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:10:21 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:55:20 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 char	*ft_strstr(const char *str, const char *finder)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

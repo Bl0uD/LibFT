@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 20:00:13 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/05 21:30:20 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/08 21:32:41 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/08 21:35:07 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	char	*res;
+	int		i;
 
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+	{
+		res = (char *)malloc(1);
+		res[0] = '\0';
+		return (res);
+	}
+	res = (char *)malloc(len + 1);
+	if (!res)
+		return (NULL);
 	i = 0;
-	while (str[i] != '\0')
+	while (i < (int)len)
+	{
+		res[i] = s[start + i];
 		i++;
-	return (i);
+	}
+	res[i] = '\0';
+	return (res);
 }

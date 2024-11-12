@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcasecmp.c                                    :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:57:22 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 18:53:55 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:34:06 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/08 19:45:50 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
+#include <stdlib.h>
 #include <stdio.h>
 
-int	ft_strcasecmp(const char *s1, const char *s2)
+void	*ft_memalloc(size_t size)
 {
-	size_t	i;
+	unsigned char	*res;
 
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (ft_tolower(s1[i]) != ft_tolower(s2[i]))
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
+	res = (unsigned char *)malloc(size);
+	if (!res)
+		return (NULL);
+	ft_bzero(res, size);
+	return (res);
 }
 /*
 int	main(void)
 {
-	const char	*s1 = "B";
-	const char	*s2 = "Bonjour";
+	void	*res;
+	size_t	size = 0;
 
-	printf("ft_memchr = %d\n", ft_strcasecmp(s1, s2));
-	printf("memchr = %d\n", strcasecmp(s1, s2));
+	res = ft_memalloc(size);
+	for (int i = 0; i < size; i++)
+		printf("%d ", ((char *)res)[i]);
+	printf("\n");
+	for (int i = 0; i < size; i++)
+		printf("[%c] ", ((char *)res)[i]);
+	printf("\n");
+	printf("ft_memalloc = %s", res);
+	printf("\n");
 	return (0);
 }*/

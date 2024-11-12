@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strnstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:16:01 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/28 20:16:01 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/08 22:22:26 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ Test	(ft_strnstr_test, len_zero)
 
 	test = ft_strnstr(str, finder, len);
 	verif = ft_strnstr(str, finder, len);
-	cr_assert_str_eq(test, verif);
+	cr_assert_eq(test, verif);
 }
 
 Test	(ft_strnstr_test, finder_equals_str)

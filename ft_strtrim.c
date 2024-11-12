@@ -1,23 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 20:00:13 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/05 21:30:20 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:39:23 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/09 12:06:09 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_incharset(char s, char const *charset)
 {
-	size_t	i;
+	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
-	while (str[i] != '\0')
+	while (charset[i])
+	{
+		if (charset[i] == s)
+			return (1);
 		i++;
-	return (i);
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	i;
+	int	j;
+
+	if (!s1)
+		return (NULL);
+	i = 0;
+	j = (int)(ft_strlen(s1) - 1);
+	while (ft_incharset(s1[i], set))
+		i++;
+	while (ft_incharset(s1[j], set))
+		j--;
+	return (ft_substr(s1, i, (j - i + 1)));
 }

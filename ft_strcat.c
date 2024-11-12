@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:57:39 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:09:31 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:53:31 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 char	*ft_strcat(char *dest, const char *str)
 {
-	int	i;
-	int	dest_len;
+	size_t	i;
+	size_t	dest_len;
 
 	i = 0;
 	dest_len = ft_strlen(dest);

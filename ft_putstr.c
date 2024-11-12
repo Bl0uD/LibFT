@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_putchar.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 20:15:08 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:23:03 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:35:33 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/08 21:45:44 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <criterion/criterion.h>
-#include <criterion/redirect.h>
+#include "libft.h"
 
-static void	redirect_all_stdout(void)
+void	ft_putstr(char const *s)
 {
-	cr_redirect_stdout();
-	cr_redirect_stderr();
-}
-
-Test(ft_putchar_test, one_char, .init=redirect_all_stdout)
-{
-	ft_putchar('c');
-	cr_assert_stdout_eq_str("c");
+	if (!s)
+		return ;
+	while (*s)
+	{
+		write(1, &*s, 1);
+		s++;
+	}
 }

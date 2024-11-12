@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:01:14 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:10:13 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/08 21:10:55 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strnstr(const char *str, const char *finder, size_t len)
 			j++;
 		else
 			j = 0;
+		if (i == len)
+			return (NULL);
 		if (j == lenfinder || j == len)
 			return ((char *)&str[i - j + 1]);
 		i++;
