@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:40:01 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:26:49 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:19:05 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:25:21 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-
+	
 }

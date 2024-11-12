@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:36:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:28:12 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:09 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:24:09 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strnew(size_t size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*res;
-
-	res = (char *)malloc(sizeof(*res) * (size + 1));
-	if (!res)
-		return (NULL);
-	ft_bzero(res, size + 1);
-	return (res);
+	
 }

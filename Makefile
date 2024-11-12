@@ -37,10 +37,12 @@ SRC = ft_atoi.c \
 			ft_strcpy.c \
 			ft_strdup.c \
 			ft_strtrim.c \
+			ft_striteri.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
+			ft_strmapi.c \
 			ft_strncat.c \
 			ft_strncmp.c \
 			ft_strncpy.c \
@@ -50,18 +52,16 @@ SRC = ft_atoi.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c \
-	#		ft_striteri.c \
-	#		ft_strmapi.c \
 
-BONUS = ft_lstnew_bonus.c \
-			ft_lstadd_front_bonus.c \
-			ft_lstsize_bonus.c \
-			ft_lstlast_bonus.c \
-			ft_lstadd_back_bonus.c \
-			ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c \
-			ft_lstiter_bonus.c \
-			ft_lstmap_bonus.c \
+BONUS = ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c \
 
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC:.c=.o) $(BONUS:.c=.o)
@@ -73,12 +73,12 @@ all : $(NAME)
 	@true
 
 $(NAME) :
-	gcc $(FLAGS) -c $(SRC)
+	gcc -I $(FLAGS) -c $(SRC)
 	ar rcs $(NAME) $(OBJ)
 
 bonus : clean
-	gcc $(FLAGS) -c $(SRC) 
-	ar rcs $(NAME)  
+	gcc -I $(FLAGS) -c $(SRC) $(BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)  
 
 clean : fclean
 	rm -f $(NAME)
@@ -87,3 +87,6 @@ fclean : clean
 	rm -rf $(OBJ) $(OBJ_BONUS)
 
 re : fclean all
+
+dev :
+	make fclean;git add .; git commit -m 'auto update';git push;cd ../test;make;make f;cd ../libft;make fclean

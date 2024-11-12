@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:39:49 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:26:45 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:50 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:25:01 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-
+	
 }

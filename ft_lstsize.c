@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:35:51 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:27:48 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:17:55 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:23:25 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int	ft_lstsize(t_list *lst)
 {
-
+	
 }

@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:34:41 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:27:13 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:24 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:24:25 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(int fd, char c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	
 }

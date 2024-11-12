@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:36:28 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:28:09 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:16:03 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:16:36 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-
+	
 }

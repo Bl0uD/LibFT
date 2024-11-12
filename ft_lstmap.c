@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:35:05 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:27:23 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:19:12 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:25:39 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-void	ft_putendl(char const *s)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
+	void (*del)(void *))
 {
 
 }

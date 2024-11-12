@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:36:03 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/10/30 12:27:55 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:17:44 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/12 23:28:48 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 
 }
