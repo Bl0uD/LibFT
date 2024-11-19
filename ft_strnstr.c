@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:01:14 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 21:10:55 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/15 16:02:59 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 
 char	*ft_strnstr(const char *str, const char *finder, size_t len)
 {
@@ -40,10 +40,11 @@ char	*ft_strnstr(const char *str, const char *finder, size_t len)
 	return (NULL);
 }
 /*
-int	main(void)
+int	main(int ac, char **av)
 {
-	const char	*str = "Bonjour les amis";
-	const char	*finder = "z";
+	(void)ac;
+	char	*str = av[1]; //"Bonjour les amis";
+	char	*finder = av[2]; //"les";
 	size_t	len = strlen(str);
 
 	printf("ft_strnstr = %s\n", ft_strnstr(str, finder, len));
