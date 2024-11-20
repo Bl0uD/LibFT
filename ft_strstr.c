@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:03:13 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 18:55:20 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/20 18:41:35 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <criterion/criterion.h>
 
 char	*ft_strstr(const char *str, const char *finder)
 {

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:02:33 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 20:34:55 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/20 18:07:30 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define _GNU_SOURCE
 #include <string.h>
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -34,19 +34,11 @@ char	*ft_strrchr(const char *str, int c)
 int	main(void)
 {
 	const char	*str = "Bonjour les amis";
-	char		*test;
-	char		*verif;
-	char		*a;
-	char		*b;
 	int			c = '\0';
 
-	test = strdup(str);
-	verif = strdup(str);
-	a = ft_strrchr(test, c);
-	b = strrchr(verif, c);
-	printf("ft_memmem = %s", a);
+	printf("ft_strrchr = %d", ft_strrchr(str, c));
 	printf("\n");
-	printf("memmem = %s", b);
+	printf("strrchr = %d", strrchr(str, c));
 	printf("\n");
 	return (0);
 }*/

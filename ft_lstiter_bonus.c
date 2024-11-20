@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 23:18:50 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/12 23:25:01 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:19:05 by jdupuis           #+#    #+#             */
+/*   Updated: 2024/11/20 18:31:59 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	
+	if (!lst || !f)
+		return ;
+	if (lst)
+		ft_lstiter(lst->next, f);
+	f(lst->content);
 }

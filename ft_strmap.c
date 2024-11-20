@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:17 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 19:45:50 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/20 17:09:44 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,20 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
+	char			*res;
+	unsigned int	i;
 
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	res = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!res)
+		return (NULL);
+	while (s[i])
+	{
+		res[i] = f(s[i]);
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

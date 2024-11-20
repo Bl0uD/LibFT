@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:35:56 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 19:45:50 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/20 17:09:02 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
+	unsigned int	i;
 
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
+	{
+		f(&s[i]);
+		i++;
+	}
 }
