@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:34:59 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/08 21:49:47 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/21 23:19:06 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putendl_fd(char const *s, int fd)
 		return ;
 	while (*s)
 	{
-		write(fd, &*s, 1);
+		write(fd, s, 1);
 		s++;
 	}
 	write(fd, "\n", 1);
