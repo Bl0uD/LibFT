@@ -90,8 +90,7 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 size_t	ft_strlcat(char *dest, const char *str, size_t size);
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
-			size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
 
 t_list	*ft_lstlast(t_list *lst);
