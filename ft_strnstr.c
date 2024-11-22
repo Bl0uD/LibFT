@@ -3,38 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:01:14 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/15 16:02:59 by ju               ###   ########.fr       */
+/*   Updated: 2024/11/22 18:05:05 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *str, const char *finder, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	size_t	lenfinder;
+	int	i;
+	int	j;
 
 	i = 0;
-	j = 0;
-	lenfinder = ft_strlen(finder);
-	if (!*finder)
+	if ((!str || !finder) && len == 0)
+		return (NULL);
+	if (ft_strlen(finder) == 0)
 		return ((char *)str);
-	while (str[i] != '\0' && lenfinder <= ft_strlen(str))
+	if ((int)len < 0)
+		return (ft_strnstr(str, finder, ft_strlen(str)));
+	if (len == 1 && str[0] == finder[0])
+		return ((char *)str);
+	while ((char)str[i] && i < (int)len - 1)
 	{
-		if (str[i] == finder[j] && j < len)
+		j = 0;
+		while ((char)str[i + j] == (char)finder[j])
+		{
+			if (j == (int)ft_strlen((char *)finder) - 1 && i + j < (int)len)
+				return ((char *)(str + i));
 			j++;
-		else
-			j = 0;
-		if (i == len)
-			return (NULL);
-		if (j == lenfinder || j == len)
-			return ((char *)&str[i - j + 1]);
+		}
 		i++;
 	}
 	return (NULL);

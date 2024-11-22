@@ -3,61 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:10:58 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/12 23:55:59 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/22 18:17:03 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *str, char c)
+int	ft_countwords(char const *s, int c)
 {
 	int	i;
-	int	count;
+	int	j;
+	int	in;
 
 	i = 0;
-	count = 0;
-	while (str[i])
+	j = 0;
+	in = 0;
+	while (s[i])
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != '\0')
-			count++;
-		while (str[i] != c && str[i])
-			i++;
+		if (s[i] != (char)c && in != 1)
+		{
+			in = 1;
+			j++;
+		}
+		if (s[i] == (char)c && in == 1)
+			in = 0;
+		i++;
 	}
-	if (str[i - 1] != c)
-		count++;
-	return (count);
+	return (j);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *str, char c)
 {
-	char	**res;
 	int		i;
-	int		j;
-	int		k;
+	int		s;
+	int		e;
+	char	**dst;
 
-	k = 0;
+	if (!str)
+		return (NULL);
+	dst = (char **)malloc(sizeof(char *) * (ft_countwords(str, (int)c) + 1));
+	if (!dst)
+		return (NULL);
 	i = 0;
-	if (!s)
-		return (NULL);
-	res = (char **)malloc((count_words((char *)s, c) + 1) * sizeof(char *));
-	if (!res)
-		return (NULL);
-	while (k < count_words((char *)s, c) && s[i])
+	s = 0;
+	while (str[s] && i < ft_countwords(str, (int)c))
 	{
-		while (s[i] == c && s[i])
-			i++;
-		j = i;
-		while (s[j] != c && s[j])
-			j++;
-		res[k] = ft_strndup((char *)s + i, j - i);
-		k++;
-		i = j;
+		while (str[s] == c && str[s])
+			s++;
+		e = s;
+		while (str[e] != c && str[e])
+			e++;
+		dst[i] = ft_strndup(str + s, e - s);
+		s = e;
+		i++;
 	}
-	res[k] = 0;
-	return (res);
+	dst[i] = 0;
+	return (dst);
 }

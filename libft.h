@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:26:49 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/21 23:18:36 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/22 18:16:24 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 }					t_list;
 
 char	*ft_itoa(int n);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *str, char c);
 char	*ft_strcat(char *dest, const char *str);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strcpy(char *dest, const char *str);
