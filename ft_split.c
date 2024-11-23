@@ -3,14 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:10:58 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/22 18:17:03 by jdupuis          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:14:37 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_free(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
 
 int	ft_countwords(char const *s, int c)
 {
@@ -57,9 +70,9 @@ char	**ft_split(char const *str, char c)
 		while (str[e] != c && str[e])
 			e++;
 		dst[i] = ft_strndup(str + s, e - s);
+		if (!dst[i++])
+			return (ft_free(dst), NULL);
 		s = e;
-		i++;
 	}
-	dst[i] = 0;
-	return (dst);
+	return (dst[i] = 0, dst);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:02:33 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/23 11:25:57 by ju               ###   ########.fr       */
+/*   Updated: 2024/11/23 13:36:46 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*last_c;
 
-	if (c == 0)
+	if ((char)c == '\0')
 		return ((char *)s + ft_strlen(s));
 	last_c = NULL;
 	while (*s)
