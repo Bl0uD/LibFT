@@ -6,7 +6,7 @@
 /*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:58:35 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/20 19:05:27 by ju               ###   ########.fr       */
+/*   Updated: 2024/11/23 11:26:05 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	main(void)
 	int		c;
 
 	c = '\0';
-	printf("my owm : %d\n",ft_strchr(str, c));
-	printf("real : %d\n",strchr(str, c));
+	printf("my owm : %p\n",ft_strchr(str, c));
+	printf("real : %p\n",strchr(str, c));
 	return (0);
 }
 */

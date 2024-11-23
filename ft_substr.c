@@ -6,7 +6,7 @@
 /*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 21:32:41 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/20 20:04:23 by ju               ###   ########.fr       */
+/*   Updated: 2024/11/23 11:26:46 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[0] = '\0';
 		return (res);
 	}
-	res = (char *)malloc(len + 1);
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	res = (char *)malloc(sizeof(char) * len + 1);
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -38,29 +40,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (res);
 }
 /*
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	main(void)
 {
-	int		i;
-	char	*str;
+	const char	*s = "Hola";
+	int			start = 0;
+	size_t		len = 500000000;
 
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		str = (char *)malloc(sizeof(char));
-		str[0] = '\0';
-		return (str);
-	}
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < (int)len)
-	{
-		str[i] = s[start + i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	printf("ft_substr = %s\n", ft_substr(s, start, len));
+	return (1);
 }
 */

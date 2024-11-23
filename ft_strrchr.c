@@ -6,7 +6,7 @@
 /*   By: ju <ju@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:02:33 by jdupuis           #+#    #+#             */
-/*   Updated: 2024/11/20 19:04:11 by ju               ###   ########.fr       */
+/*   Updated: 2024/11/23 11:25:57 by ju               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,8 @@ int	main(void)
 	const char	*str = "Bonjour les amis";
 	int			c = '\0';
 
-	printf("ft_strrchr = %d", ft_strrchr(str, c));
-	printf("\n");
-	printf("strrchr = %d", strrchr(str, c));
-	printf("\n");
+	printf("ft_strrchr = %p\n", ft_strrchr(str, c));
+	printf("strrchr = %p\n", strrchr(str, c));
 	return (0);
-}*/
+}
+*/
