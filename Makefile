@@ -96,4 +96,4 @@ fclean : clean
 re : fclean all
 
 dev :
-	make fclean;git add .; git commit -m 'auto update';git push;cd ../test;make;make f;cd ../libft;make fclean
+	make fclean;git add .; git commit -m 'auto update';git push
